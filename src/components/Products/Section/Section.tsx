@@ -11,16 +11,16 @@ export interface CategoryItem {
 
 const Section = ({ title, items }: CategoryItem) => {
   return (
-    <section className={styles.section}>
-      <h3 className={styles.title}>{title}</h3>
+    <div className={styles.section}>
+      <h4 className={styles.title}>{title}</h4>
 
-      <div className={styles.cards}>
+      <ul className={styles.cards}>
         {items.length &&
           items.map((item: IProduct) => {
             return <Card key={item.id} {...item} />;
           })}
-      </div>
-    </section>
+      </ul>
+    </div>
   );
 };
 

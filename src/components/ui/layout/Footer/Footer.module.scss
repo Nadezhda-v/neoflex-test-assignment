@@ -1,7 +1,5 @@
 .footer {
   width: 100%;
-  position: absolute;
-  bottom: 0;
 
   .footerContent {
     display: flex;
@@ -24,7 +22,10 @@
 
   .contentContainer {
     display: flex;
-    gap: 500px;
+
+    .menuContent {
+      padding-right: 180px;
+    }
 
     a {
       &:hover {
@@ -45,6 +46,58 @@
       padding-bottom: 20px;
       align-items: center;
       gap: 18px;
+    }
+  }
+}
+
+@media (max-width: 800px) {
+  .footer {
+    .footerNav {
+      font-size: 0.9rem;
+    }
+
+    .contentContainer {
+      .menuContent {
+        padding-right: 150px;
+      }
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .footer {
+    .footerContent {
+      justify-content: initial;
+      flex-direction: column;
+    }
+
+    .contentContainer {
+      padding-top: 20px;
+      justify-content: space-between;
+  
+      .menuContent {
+        padding-right: 180px;
+      }
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .footer {
+    .footerContent {
+      border-radius: 10px 10px 0 0;
+
+      .logo {
+        & img {
+          width: 20%;
+        }
+      }
+    }
+
+    .contentContainer {
+      .menuContent {
+        padding-right: 70px;
+      }
     }
   }
 }

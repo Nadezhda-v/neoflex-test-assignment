@@ -1,7 +1,4 @@
 .header {
-  position: sticky;
-  top: 0;
-  left: 0;
   width: 100%;
   padding: 15px 0;
 
@@ -19,12 +16,41 @@
 
   .account {
     display: flex;
-    gap: 15px;
+    gap: 45px;
 
     a {
       display: flex;
       align-items: center;
       justify-content: center;
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .header {
+    padding: 12px 0;
+  
+    .headerСontainer {
+      max-height: 40px;
+    }
+
+    .logo {
+      margin-right: 15px;
+
+      & img {
+        width: 70%;
+      }
+    }
+
+    .account {
+      gap: 10px;
+
+      a {
+        & svg {
+          width: 16px;
+          height: 16px;
+        }
+      }
     }
   }
 }

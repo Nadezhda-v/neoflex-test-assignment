@@ -1,0 +1,179 @@
+.card {
+  border-radius: 30px;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.1);
+  background: #fff;
+  position: relative;
+  display: grid;
+  grid-template-rows: 286px 120px;
+  grid-template-areas:
+    "image"
+    "content";
+    flex: 0 1 350px;
+    grid-template-columns: 350px;
+
+  .image {
+    padding-top: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-area: image;
+    padding-bottom: 50px;
+  }
+
+  .info {
+    padding: 0px 20px;
+    display: grid;
+    grid-template-areas:
+      "title price"
+      "rating button";
+    grid-gap: 30px;
+    margin-bottom: 26px;
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    grid-area: content;
+
+    .title {
+      color: #1c1c27;
+      grid-area: title;
+    }
+
+    .boxPrices {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      grid-area: price;
+      justify-self: end;
+
+      .price {
+        font-weight: 600;
+        color: #ffa542;
+      }
+
+      .oldPrice {
+        font-weight: 600;
+        font-size: 13px;
+        text-decoration: line-through;
+        color: #ffce7f;
+      }
+    }
+
+    .rating {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      grid-area: rating;
+
+      .rate {
+        font-weight: 600;
+        color: #838383;
+      }
+    }
+
+    .buyButton {
+      font-weight: 600;
+      grid-area: button;
+      justify-self: end;
+    }
+  }
+}
+
+@media (max-width: 800px) {
+  .card {
+    border-radius: 20px;
+    grid-template-rows: 250px 110px;
+    flex: 0 1 290px;
+    grid-template-columns: 290px;
+
+    .image {
+      padding-top: 10px;
+      padding-bottom: 20px;
+
+      img {
+        width: 60%;
+      }
+    }
+
+    .info {
+      grid-gap: 20px;
+      margin-bottom: 20px;
+
+      .title {
+        font-size: 0.9rem;
+      }
+
+      .boxPrices {
+        .price {
+          font-size: 0.9rem;
+        }
+      }
+  
+      .rating {
+        gap: 8px;
+
+        .rate {
+          font-size: 0.9rem;
+        }
+      }
+  
+      .buyButton {
+        font-size: 0.9rem;
+      }
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .card {
+    border-radius: 10px;
+    grid-template-rows: 160px 60px;
+    flex: 0 1 200px;
+    grid-template-columns: 200px;
+
+    .image {
+      padding-top: 6px;
+      padding-bottom: 10px;
+
+      img {
+        width: 34%;
+      }
+    }
+
+    .info {
+      padding: 0 12px;
+      grid-gap: 12px;
+      margin-bottom: 10px;
+
+      .title {
+        font-size: 0.7rem;
+      }
+
+      .boxPrices {
+        .price {
+          font-size: 0.7rem;
+        }
+
+        .oldPrice {
+          font-size: 0.6rem;
+        }
+      }
+  
+      .rating {
+        gap: 6px;
+
+        & svg {
+          width: 16px;
+          height: 16px;
+        }
+
+        .rate {
+          font-size: 0.7rem;
+        }
+      }
+  
+      .buyButton {
+        font-size: 0.7rem;
+      }
+    }
+  }
+}

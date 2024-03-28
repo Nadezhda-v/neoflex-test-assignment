@@ -8,8 +8,8 @@ import { PROJECT_INFORM } from '../../../../utils/constans';
 
 const Footer: FC = () => {
   return (
-    <footer className={styles.footer}>
-      <div className={cn(styles.footerContent, 'container')}>
+    <footer className={cn(styles.footer, 'container')}>
+      <div className={styles.footerContent}>
         <div className={styles.logo}>
           <img
             src={`/${PROJECT_INFORM.logo}`}

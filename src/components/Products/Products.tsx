@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import cn from 'classnames';
 
 import styles from './Products.module.scss';
 import { useAppDispatch, useAppSelector } from '../../hooks/hook';
@@ -23,12 +24,12 @@ const Products = () => {
   }, []);
 
   return (
-    <div className={styles.products}>
+    <section className={styles.products}>
       {categories.length &&
         categories.map(({ title, items }) => {
           return <Section key={title} title={title} items={items} />;
         })}
-    </div>
+    </section>
   );
 };
 
