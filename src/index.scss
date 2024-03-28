@@ -1,0 +1,83 @@
+@import "~normalize.css";
+
+body {
+  min-width: 320px;
+  max-width: 1440px;
+  min-height: 100vh;
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  color: #000;
+  background-color: #eaeaea;
+  margin: 0 auto;
+}
+
+html {
+  position: relative;
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+img,
+svg {
+  max-width: 100%;
+  height: auto;
+}
+
+button {
+  padding: 0;
+  cursor: pointer;
+  border: 0;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+h1,
+h2,
+h3,
+h5,
+p {
+  margin: 0;
+}
+
+a {
+  position: relative;
+  color: inherit;
+  text-decoration: none;
+  transition: 0.2s;
+  cursor: pointer;
+}
+
+a:after {
+  position: absolute;
+  content: "";
+  bottom: 0;
+  left: 0;
+  height: 1px;
+  width: 0;
+  background-color: #fff;
+  transition: 0.5s;
+}
+
+a:focus,
+a:active {
+  opacity: 0.7;
+}
+
+svg path {
+  transition: fill 0.3s ease;
+}
+
+.container {
+  max-width: 1110px;
+  padding: 0 25px;
+  margin: 0 auto;
+}
