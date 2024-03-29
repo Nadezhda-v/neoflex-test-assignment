@@ -1,5 +1,4 @@
 import React, { useEffect } from 'react';
-import cn from 'classnames';
 
 import styles from './Products.module.scss';
 import { useAppDispatch, useAppSelector } from '../../hooks/hook';
@@ -13,6 +12,7 @@ export interface IProduct {
   price: number;
   oldPrice?: number;
   rate: number;
+  quantity?: number;
 }
 
 const Products = () => {

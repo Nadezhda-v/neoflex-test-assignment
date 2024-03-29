@@ -1,7 +1,6 @@
 {
   "extends": [
     "airbnb",
-    "plugin:jsx-a11y/recommended",
     "plugin:testing-library/react",
     "plugin:jest-dom/recommended"
   ],
@@ -17,7 +16,7 @@
       }
     }
   },
-  "plugins": ["jsx-a11y", "react-hooks", "testing-library", "jest-dom", "@typescript-eslint"],
+  "plugins": ["react-hooks", "testing-library", "jest-dom", "@typescript-eslint"],
   "env": {
     "amd": true,
     "browser": true,
@@ -137,9 +136,8 @@
     "react/require-default-props": "off",
     "class-methods-use-this": "off",
     "react/no-danger": [0],
-    "jsx-a11y/anchor-is-valid": 1,
-    "jsx-a11y/label-has-for": "off",
-    "jsx-a11y/label-has-associated-control": "off",
+    "jsx-a11y/click-events-have-key-events": "off",
+    "jsx-a11y/no-static-element-interactions": "off",
     "padding-line-between-statements": [
       "error",
       { "blankLine": "always", "prev": "*", "next": "return" },

@@ -17,7 +17,7 @@ const Section = ({ title, items }: CategoryItem) => {
       <ul className={styles.cards}>
         {items.length &&
           items.map((item: IProduct) => {
-            return <Card key={item.id} {...item} />;
+            return <Card key={item.id} item={item} />;
           })}
       </ul>
     </div>
