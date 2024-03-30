@@ -1,0 +1,25 @@
+.section {
+  .title {
+    color: #838383;
+  }
+
+  .cards {
+    display: flex;
+    gap: 30px;
+    padding: 24px 0 28px;
+    flex-wrap: wrap;
+  }
+}
+
+@media (max-width: 480px) {
+  .section {
+    .title {
+      font-size: 0.84rem;
+    }
+
+    .cards {
+      gap: 20px;
+      padding: 16px 0 22px;
+    }
+  }
+}

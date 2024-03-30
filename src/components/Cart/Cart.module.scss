@@ -1,0 +1,128 @@
+.cart {
+  .title {
+    padding-top: 14px;
+    font-weight: 600;
+    font-size: 1.2rem;
+    color: #1c1c27;
+  }
+
+  .empty {
+    padding-top: 20px;
+    display: flex;
+    justify-content: center;
+  }
+
+  .content {
+    display: flex;
+    gap: 127px;
+    justify-content: space-between;
+    padding-top: 13px;
+    padding-bottom: 30px;
+
+    .list {
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+      width: 100%;
+    }
+  }
+
+  .orderAmount {
+    border-radius: 30px;
+    width: 348px;
+    height: 114px;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    .total {
+      font-weight: 600;
+      color: #000;
+      text-transform: uppercase;
+      display: flex;
+      justify-content: space-between;
+      padding: 20px 20px 0;
+
+      .totalPrice {
+        padding: 0;
+      }
+    }
+
+    .checkoutButton {
+      border-radius: 20px;
+      width: 100%;
+      height: 65px;
+      box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.25);
+      background-color: #101010;
+      font-weight: 600;
+      text-align: center;
+      color: #fff;
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+  .cart {
+    .content {
+      gap: 50px;
+    }
+
+    .orderAmount {
+      width: 300px;
+    }
+  }
+}
+
+@media (max-width: 800px) {
+  .cart {
+    .content {
+      flex-direction: column;
+
+      .actions {
+        display: flex;
+        justify-content: center;
+      }
+    }
+
+    .orderAmount {
+      border-radius: 20px;
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .cart {
+    .title {
+      padding-top: 10px;
+      font-size: 1rem;
+    }
+
+    .content {
+      gap: 30px;
+
+      .list {
+        gap: 20px;
+      }
+
+      .actions {
+        .orderAmount {
+          width: 100%;
+          height: 96px;
+          border-radius: 10px;
+
+          .total {
+            font-size: 0.9rem;
+          }
+
+          .checkoutButton {
+            border-radius: 10px;
+            height: 45px;
+            font-size: 0.8rem;
+          }
+        }
+      }
+    }
+  }
+}
