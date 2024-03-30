@@ -7,7 +7,7 @@ export const productsRequestAsync = createAsyncThunk(
   'products/axios',
   async () => {
     try {
-      const response = await axios.get(`${BASE_URL}data.json`);
+      const response = await axios.get(`${BASE_URL}/data.json`);
       const { categories } = response.data;
 
       return categories;
