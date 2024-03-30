@@ -7,8 +7,12 @@ import { PROJECT_INFORM } from '../../../../utils/constans';
 import Paths from '../../../../utils/paths';
 import FavouritesIcon from '../../../icons/FavouritesIcon';
 import CartIcon from '../../../icons/CartIcon';
+import { useAppSelector } from '../../../../hooks/hook';
+import { getSum } from '../../../../utils/getSum';
 
 const Header: FC = () => {
+  const cart = useAppSelector((state) => state.cart.cart);
+
   return (
     <header className={styles.header}>
       <div className={cn(styles.headerСontainer, 'container')}>
@@ -32,6 +36,12 @@ const Header: FC = () => {
             <div className={styles.icon}>
               <CartIcon />
             </div>
+
+            {!!cart.length && (
+              <span className={styles.count}>
+                {getSum(cart.map((item) => item.quantity ?? 0))}
+              </span>
+            )}
           </Link>
         </div>
       </div>

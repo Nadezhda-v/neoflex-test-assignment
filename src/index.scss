@@ -1,10 +1,46 @@
 @import "~normalize.css";
 
+@font-face {
+  font-family: "Montserrat", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  src: local(""),
+    url("fonts/Montserrat-Bold.ttf")
+      format("truetype"),
+}
+
+@font-face {
+  font-family: "Montserrat", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  src: local(""),
+    url("fonts/Montserrat-Medium.ttf")
+      format("truetype"),
+}
+
+@font-face {
+  font-family: "Montserrat", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  src: local(""),
+    url("fonts/Montserrat-Regular.ttf")
+      format("truetype"),
+}
+
+@font-face {
+  font-family: "Montserrat", sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  src: local(""),
+    url("fonts/Montserrat-SemiBold.ttf")
+      format("truetype"),
+}
+
 body {
   min-width: 320px;
   max-width: 1440px;
   min-height: 100vh;
-  font-family: Arial, sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-size: 16px;
   color: #000;
   background-color: #eaeaea;
@@ -25,6 +61,7 @@ html {
 img,
 svg {
   max-width: 100%;
+  max-height: 100%;
   height: auto;
 }
 

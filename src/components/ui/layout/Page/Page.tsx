@@ -3,12 +3,11 @@ import cn from 'classnames';
 
 import { IPageProps } from './Page.types';
 import styles from './Page.module.scss';
-import { Preloader } from '../../Preloader/Preloader';
 
-const Page: FC<IPageProps> = ({ children, loading = false, className }) => {
+const Page: FC<IPageProps> = ({ children, className }) => {
   return (
     <div className={cn('container', styles.page, className)}>
-      {loading ? <Preloader color='#FFA542' size={30} /> : <>{children}</>}
+      <>{children}</>
     </div>
   );
 };

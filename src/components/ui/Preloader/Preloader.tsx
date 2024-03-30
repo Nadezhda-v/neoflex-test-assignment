@@ -7,9 +7,14 @@ interface PreloaderProps {
 }
 
 export const Preloader: FC<PreloaderProps> = ({ color, size }) => (
-  <ClipLoader
-    color={color}
-    cssOverride={{ display: 'block', margin: 'auto' }}
-    size={size}
-  />
+  <div
+    style={{
+      position: 'fixed',
+      top: '40%',
+      left: '50%',
+      transform: 'translate(-50%, -50%)',
+    }}
+  >
+    <ClipLoader color={color} size={size} />
+  </div>
 );

@@ -24,15 +24,15 @@
 
   button {
     cursor: pointer;
-    background: #0077ff;
+    background: #efa802;
     border: 1px solid #D9D9D9;
     border-radius: 4px;
     padding: 10px 14px;
-    color: #fff;
+    color: #000;
     transition: background 0.3s ease;
   
     &:hover {
-      background: #0066da;
+      background: #ff9d4d;
     }
   }
 }
